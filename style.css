@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6296, #fdaba2);
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px white;
+  line-height: 1.2;
+}
+
+#countdown {
+  font-size: 1.5rem;
+  background-color: #fffafcaa;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: 2px dashed pink;
+  box-shadow: 0 0 15px #ffb6c1;
+  color: #d63384;
+  width: 90%;
+  max-width: 400px;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #c71585;
+  font-style: italic;
+  max-width: 90%;
+}
+
+/* Floating heart styles */
+.heart {
+  position: absolute;
+  color: pink;
+  font-size: 24px;
+  animation: float 5s linear infinite;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ✅ Mobile responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #countdown {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
+}
